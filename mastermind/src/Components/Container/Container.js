@@ -1,6 +1,6 @@
 import React from 'react';
 import ChooseColors from '../ChooseColors/ChooseColors';
-import '../Container/Container.scss';
+import '../Container/Container.css';
 import FindOut from '../FindOut/FindOut';
 import Row from '../Row/Row';
 

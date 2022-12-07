@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Container/Container.scss';
+import '../Container/Container.css';
 
 function Row(props) {
 
@@ -7,16 +7,21 @@ function Row(props) {
     let perfectHit = 'perfectHit';
     let goodHit = 'goodHit';
     let hitColor = "hit";
+    let hitColor1 = "hit";
+    let hitColor2 = "hit";
+    let hitColor3 = "hit";
+    let hitColor4 = "hit";
     let chooseColor = props.chooseColor;
-
     const [color1, setColor1] = React.useState();
     const [color2, setColor2] = React.useState();
     const [color3, setColor3] = React.useState();
     const [color4, setColor4] = React.useState();
+    
+    let colorsArray = [color1,color2,color3,color4];
 
     return (
         <div className='box'>
-            <button disabled={color1 === undefined || color2 === undefined || color3 === undefined || color4 === undefined} onClick={() => {
+            <button disabled={colorsArray.map(data => {return data !== undefined})} onClick={() => {
 
             }}>Done</button>
             <div className='chooseBox'>
@@ -27,17 +32,38 @@ function Row(props) {
             </div>
             <div className='hitsContainer'>
                 <div className='hitsBox'>
-                    {randomColors.forEach(data => {
-                        if(data === color1){
-                            return hitColor = "perfectHit";                           
-                        }
+                {randomColors.forEach(data => {                        
+                        if(colorsArray[0] === randomColors[0]){
+                            return hitColor1 = "perfectHit";                           
+                        }else if(data === color1){
+                            return hitColor1 = "goodHit"
+                        }                       
                     })}
-                    <div className={`${hitColor}`}></div>  
-                    <div className={`${hitColor}`}></div>  
-                </div>
-                <div className='hitsBox'>
-                    <div className={`${hitColor}`}></div>
-                    <div className={`${hitColor}`}></div>
+                    {randomColors.forEach(data => {                        
+                        if(colorsArray[1] === randomColors[1]){
+                            return hitColor2 = "perfectHit";                           
+                        }else if(data === color2){
+                            return hitColor2 = "goodHit"
+                        }                                
+                    })}
+                    {randomColors.forEach(data => {                        
+                        if(colorsArray[2] === randomColors[2]){
+                            return hitColor3 = "perfectHit";                           
+                        }else if(data === color3){
+                            return hitColor3 = "goodHit"
+                        }                                
+                    })}
+                    {randomColors.forEach(data => {                        
+                        if(colorsArray[3] === randomColors[3]){
+                            return hitColor4 = "perfectHit";                           
+                        }else if(data === color4){
+                            return hitColor4 = "goodHit"
+                        }                                
+                    })}
+                    <div className={`${hitColor1}`}></div>  
+                    <div className={`${hitColor2}`}></div>  
+                    <div className={`${hitColor3}`}></div>
+                    <div className={`${hitColor4}`}></div>
                 </div>
             </div>
         </div>

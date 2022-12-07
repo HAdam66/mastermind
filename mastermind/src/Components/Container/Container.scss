@@ -1,0 +1,98 @@
+$firstColor: red;
+$secondColor: blue;
+$thirdColor: yellow;
+$fourthColor: green;
+$fifthColor: black;
+$sixthColor: purple;
+$seventhColor: brown;
+$eighthColor: white;
+
+$primaryHit: brown;
+$perfectHit: black;
+$goodHit: white;
+
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.rowContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.colorBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    // width: 14rem;
+    // height: 100%;
+}
+
+.box, .chooseBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.hitsContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.hitsBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.hit{
+    width: 2rem;
+    height: 2rem;
+    border: 0.08rem solid black;
+    border-radius: 50%;
+    background-color: $primaryHit;
+}
+
+.perfectHit{
+    width: 2rem;
+    height: 2rem;
+    border: 0.08rem solid black;
+    border-radius: 50%;
+    background-color: $perfectHit;
+}
+
+.goodHit{
+    background-color: $goodHit;
+}
+
+.colorCircle {
+    width: 6rem;
+    height: 6rem;
+    border: 0.08rem solid black;
+    border-radius: 50%;
+    background-color: none;
+}
+
+.colorCircle1 {
+    background-color: $firstColor;
+}
+.colorCircle2 {
+    background-color: $secondColor;
+}
+.colorCircle3 {
+    background-color: $thirdColor;
+}
+.colorCircle4 {
+    background-color: $fourthColor;
+}
+.colorCircle5 {
+    background-color: $fifthColor;
+}
+.colorCircle6 {
+    background-color: $sixthColor;
+}
+.colorCircle7 {
+    background-color: $seventhColor;
+}
+.colorCircle8 {
+    background-color: $eighthColor;
+}

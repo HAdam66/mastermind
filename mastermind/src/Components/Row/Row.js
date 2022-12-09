@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Container/Container.css';
+import DoneBut from '../DoneBut/DoneBut';
 
 function Row(props) {
 
@@ -21,9 +22,12 @@ function Row(props) {
 
     return (
         <div className='box'>
-            <button disabled={colorsArray.map(data => {return data !== undefined})} onClick={() => {
-
-            }}>Done</button>
+            <DoneBut />
+            {/* {color1 !== undefined && color2 !== undefined && color3 !== undefined && color4 !== undefined ?
+            <DoneBut />
+            :
+            null
+            } */}
             <div className='chooseBox'>
                 <div className={`colorCircle colorCircle${color1}`} onClick={() => setColor1(chooseColor)}></div>
                 <div className={`colorCircle colorCircle${color2}`} onClick={() => setColor2(chooseColor)}></div>

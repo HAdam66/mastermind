@@ -29,10 +29,10 @@ function Row(props) {
             null
             } */}
             <div className='chooseBox'>
-                <div className={`colorCircle colorCircle${color1}`} onClick={() => setColor1(chooseColor)}></div>
-                <div className={`colorCircle colorCircle${color2}`} onClick={() => setColor2(chooseColor)}></div>
-                <div className={`colorCircle colorCircle${color3}`} onClick={() => setColor3(chooseColor)}></div>
-                <div className={`colorCircle colorCircle${color4}`} onClick={() => setColor4(chooseColor)}></div>
+                <button className={`colorCircle colorCircle${color1}`} onClick={() => setColor1(chooseColor)}></button>
+                <button className={`colorCircle colorCircle${color2}`} onClick={() => setColor2(chooseColor)}></button>
+                <button className={`colorCircle colorCircle${color3}`} onClick={() => setColor3(chooseColor)}></button>
+                <button className={`colorCircle colorCircle${color4}`} onClick={() => setColor4(chooseColor)}></button>
             </div>
             <div className='hitsContainer'>
                 <div className='hitsBox'>

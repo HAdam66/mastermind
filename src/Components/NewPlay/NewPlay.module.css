@@ -9,10 +9,18 @@
     height: 3rem;
 }
 
-.showColors{
+.showColors, .title{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2.5rem;
+    margin: 0;
     border: 1px solid black;
-    padding: 1rem;
-    gap: 0.5rem;
+    width: 15rem;
+    height: 3.5rem;
+}
+
+.title{
+    margin-bottom: 0.4rem;
 }

@@ -1,5 +1,13 @@
-.box{
+.box {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(1, auto);
+    gap: 0.2rem;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .box {
+        grid-template-columns: repeat(2, auto);
+        gap: 0.7rem;
+    }
 }

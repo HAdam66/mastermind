@@ -14,7 +14,7 @@ function NewPlay(props) {
 
             {visible === 'showBt'
                 ?
-                <h1>MasterMind</h1>
+                <h1 className={NewPlayStyle.title}>MasterMind</h1>
                 :
                 <div className={NewPlayStyle.showColors}>
                     {randomColors.map(data => {

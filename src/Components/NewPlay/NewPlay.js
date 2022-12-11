@@ -1,6 +1,6 @@
 import React from 'react';
 import { handleRandomNumber } from '../../service';
-import ButtonSytle from '../CSS/ButtonStyle.module.css';
+import ButtonSytle from '../ButtonCSS/ButtonStyle.module.css';
 import NewPlayStyle from '../NewPlay/NewPlay.module.css';
 
 function NewPlay(props) {
@@ -31,7 +31,7 @@ function NewPlay(props) {
                 :
                 <button className={ButtonSytle.but} onClick={() => {
                     setVisible("new")
-                }}>Show the colors</button>
+                }}>Solve</button>
             }
         </div>
     )

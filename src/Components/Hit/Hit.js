@@ -1,4 +1,5 @@
 import React from 'react';
+import { win } from '../../service';
 import HitStyle from '../Hit/Hit.module.css'
 
 function Hit(props) {
@@ -9,13 +10,15 @@ function Hit(props) {
     let hitArray = [hit1, hit2, hit3, hit4];
     let colorsArray = props.colorsArray;
     let randomColors = props.randomColors;
+
     for (let i = 0; i < 4; i++) {
         {
-            randomColors.forEach(element => {
-                if (element === colorsArray[i]) {
-                    return hitArray[i] = 'white'
-                } else if (randomColors[i] === colorsArray[i]) {
+            randomColors.filter(element => {
+                if (randomColors[i] === colorsArray[i]) {
                     return hitArray[i] = 'black'
+                } else if (element === colorsArray[i]) {
+
+                    return hitArray[i] = 'white'
                 }
             })
         }
@@ -27,6 +30,11 @@ function Hit(props) {
             {hitArray.sort().map(hit => {
                 return <div className={hit}></div>
             })}
+            {win(hitArray) === true
+                ?
+                alert("you win")
+                :
+                null}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import Hit from '../Hit/Hit';
-import ButtonStyle from '../CSS/ButtonStyle.module.css';
+import ButtonStyle from '../ButtonCSS/ButtonStyle.module.css';
 
 function DoneBut(props) {
     let randomColors = props.randomColors;

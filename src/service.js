@@ -6,3 +6,11 @@ export function handleRandomNumber(setNumber) {
         return setter(Math.floor(Math.random() * (maxVal - minVal + 1) + minVal));
     })
 }
+
+export function win(hitArray){
+    let mind = function (data) {
+        return data === 'black'
+    }
+    return hitArray.every(mind) === true
+    
+}

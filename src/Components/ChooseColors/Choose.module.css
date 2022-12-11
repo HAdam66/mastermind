@@ -1,12 +1,13 @@
 .colorBox{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-direction: row;
     margin-top: 0.5rem;
-    gap: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {
     .colorBox{
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
     }
 }

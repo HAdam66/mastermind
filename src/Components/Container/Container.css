@@ -1,53 +1,46 @@
 .mainContainer{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
 }
 
-.rowContainer {
+.masterMindContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+
+.newPlayContainer{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 50%;
 }
 
-.colorBox{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.box, .chooseBox{
-    display: flex;
-    flex-direction: row;
-}
-
-.hitsContainer{
+.rowContainer{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.hitsBox{
-    display: flex;
-    flex-flow: wrap;
-    width: 5rem;
-}
-
-.perfectHit, .goodHit{
-    width: 2rem;
-    height: 2rem;
+.black, .white, .zero{
+    width: 1rem;
+    height: 1rem;
     border: 0.08rem solid black;
     border-radius: 50%;
 }
 
-.perfectHit{
+.black{
     background-color: black;
 }
 
-.goodHit{
+.white{
     background-color: white;
 }
 
 .colorCircle {
-    width: 6rem;
-    height: 6rem;
+    width: 2rem;
+    height: 2rem;
     border: 0.08rem solid black;
     border-radius: 50%;
     background-color: none;

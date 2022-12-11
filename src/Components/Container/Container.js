@@ -2,12 +2,12 @@ import React from 'react';
 import ChooseColors from '../ChooseColors/ChooseColors';
 import '../Container/Container.css';
 import FindOut from '../FindOut/FindOut';
-import NewPlayBut from '../NewPlayBut/NewPlayBut';
-import Row from '../Row/Row';
+import NewPlay from '../NewPlay/NewPlay';
+import Rows from '../Rows/Rows';
 
 function Container() {
 
-    
+
     const [number1, setNumber1] = React.useState();
     const [number2, setNumber2] = React.useState();
     const [number3, setNumber3] = React.useState();
@@ -17,22 +17,14 @@ function Container() {
 
     return (
         <div className='mainContainer'>
-            <div className='colorsContainer'>
-                <FindOut randomColors={[number1, number2, number3, number4]}/>
-                <ChooseColors setChooseColor={setChooseColor} />
-                <NewPlayBut setters={numberSetters}/>
-            </div>
-            <div className='rowContainer'>
-                <Row chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]}/>
-                <Row chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]}/>
-                <Row chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]}/>
-                <Row chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]}/>
-                <Row chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]}/>
-                <Row chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]}/>
-                <Row chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]}/>
-                <Row chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]}/>
-                <Row chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]}/>
-                <Row chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]}/>
+            <div className='masterMindContainer'>
+                <div className='newPlayContainer'>
+                    <NewPlay setters={numberSetters} randomColors={[number1, number2, number3, number4]} />
+                    <ChooseColors setChooseColor={setChooseColor} />
+                </div>
+                <div className='rowContainer'>
+                    <Rows chooseColor={chooseColor} randomColors={[number1, number2, number3, number4]} />
+                </div>
             </div>
         </div>
     )

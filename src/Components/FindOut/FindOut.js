@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import FindOutStyle from '../FindOut/FindOut.module.css';
 
 function FindOut(props) {
 
     let randomColors = props.randomColors;
-    
     return (
-        <div className='box'>
+        <div className={FindOutStyle.box}>
+            
             {randomColors.map(data => {
                 return <div className={`colorCircle colorCircle${data}`}></div>
             })}

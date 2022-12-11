@@ -1,4 +1,5 @@
 import React from 'react';
+import ChooseStyle from '../ChooseColors/Choose.module.css';
 
 function Colors(props) {
 
@@ -6,9 +7,9 @@ function Colors(props) {
     let setChooseColor = props.setChooseColor;
 
     return (
-        <div className='colorBox'>
+        <div className={ChooseStyle.colorBox}>
             {chooseColors.map(data => {
-                return <div className={`colorCircle colorCircle${data}`} onClick={() => setChooseColor(data)}></div>
+                return <button className={`colorCircle colorCircle${data}`} onClick={() => setChooseColor(data)}></button>
             })}
         </div>
     )

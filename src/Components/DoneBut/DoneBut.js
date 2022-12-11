@@ -1,11 +1,25 @@
 import React from 'react';
+import Hit from '../Hit/Hit';
+import ButtonStyle from '../CSS/ButtonStyle.module.css';
 
-function DoneBut() {
+function DoneBut(props) {
+    let randomColors = props.randomColors;
+    let colorsArray = props.colorsArray;
+    let setDone = props.setDone;
+    let done = props.done;
+    let ready = 'ready';
 
-    const [done, setDone] = React.useState("not ready");
-  return (
-    <button disabled={done === "ready"} onClick={() => {setDone("ready")}}>Done</button>
-  )
+
+    return (
+        <div className={ButtonStyle.box}>
+            {done !== ready
+                ?
+                <button className={ButtonStyle.but} disabled={done === ready} onClick={() => { setDone(ready) }}>Done</button>
+                :
+                <Hit randomColors={randomColors} colorsArray={colorsArray} />
+            }
+        </div>
+    )
 }
 
 export default DoneBut

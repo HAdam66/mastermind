@@ -13,11 +13,10 @@ function Hit(props) {
 
     for (let i = 0; i < 4; i++) {
         {
-            randomColors.filter(element => {
+            randomColors.forEach(element => {
                 if (randomColors[i] === colorsArray[i]) {
                     return hitArray[i] = 'black'
                 } else if (element === colorsArray[i]) {
-
                     return hitArray[i] = 'white'
                 }
             })

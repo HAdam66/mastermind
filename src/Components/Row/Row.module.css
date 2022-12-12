@@ -3,9 +3,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    border: 1px solid black;
     height: 2.5rem;
     padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.318);
+    border-left: 3px solid rgb(103, 62, 27);
+    border-right: 3px solid rgb(165, 83, 42);
+    border-top: 3px solid rgb(165, 83, 42);
+    border-bottom: 3px solid rgb(103, 62, 27);
 }
 
 .circleBox{

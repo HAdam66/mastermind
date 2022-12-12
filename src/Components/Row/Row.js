@@ -17,7 +17,7 @@ function Row(props) {
     let colorsArray = [color1, color2, color3, color4];
     return (
         <div className={RowStyle.box}>
-            <h2>{rowNum}</h2>
+            <h2 className={RowStyle.rowNumber}>{rowNum}</h2>
             <div className={RowStyle.circleBox}>
                 <button disabled={done === ready} className={`colorCircle colorCircle${color1}`} onClick={() => setColor1(chooseColor)}></button>
                 <button disabled={done === ready} className={`colorCircle colorCircle${color2}`} onClick={() => setColor2(chooseColor)}></button>

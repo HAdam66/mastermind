@@ -4,7 +4,7 @@ body{
 
 .mainContainer{
     display: flex;
-    justify-content: center;    
+    justify-content: center; 
 }
 
 .masterMindContainer{
@@ -13,6 +13,7 @@ body{
     justify-content: center;
     background-image: url(fa.jpg);
     background-size: 50%;
+    width: 100%;
 }
 
 .newPlayContainer{
@@ -76,13 +77,14 @@ body{
 
 @media screen and (min-width: 1024px) {
 
+    
     .masterMindContainer{
         flex-direction: row;
         justify-content: center;
     }
     
     .newPlayContainer{
-        width: 50%;
+        width: 40%;
         padding: 0.5rem;
     }
 }

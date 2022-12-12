@@ -2,12 +2,13 @@
     display: grid;
     grid-template-columns: repeat(1, auto);
     gap: 0.2rem;
-    margin: 0 auto;
+    margin: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {
     .box {
         grid-template-columns: repeat(2, auto);
         gap: 0.7rem;
+        margin: 0;
     }
 }

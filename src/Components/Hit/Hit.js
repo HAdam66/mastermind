@@ -15,9 +15,9 @@ function Hit(props) {
         {
             randomColors.forEach(element => {
                 if (randomColors[i] === colorsArray[i]) {
-                    return hitArray[i] = 'black'
+                    return hitArray[i] = 'black';
                 } else if (element === colorsArray[i]) {
-                    return hitArray[i] = 'white'
+                    return hitArray[i] = 'white';
                 }
             })
         }
@@ -31,7 +31,7 @@ function Hit(props) {
             })}
             {win(hitArray) === true
                 ?
-                alert("you win")
+                alert("You won!")
                 :
                 null}
         </div>

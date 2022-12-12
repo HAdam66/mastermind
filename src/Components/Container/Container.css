@@ -28,7 +28,7 @@ body{
     padding: 0.5rem;
 }
 
-.black, .white, .zero{
+.black, .white{
     width: 1rem;
     height: 1rem;
     border: 0.04rem solid black;
@@ -80,11 +80,13 @@ body{
     
     .masterMindContainer{
         flex-direction: row;
+        align-items: center;
         justify-content: center;
+        height: 100vh;
     }
     
     .newPlayContainer{
-        width: 40%;
+        gap: 0.6rem;
         padding: 0.5rem;
     }
 }
